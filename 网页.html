@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二小组作品集</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <h1>第二小组作品集</h1>
+        </div>
+        <div class="nav">
+            <a href="#p1">项目一</a>
+            <a href="#p2">项目二</a>
+            <a href="#p3">项目三</a>
+            <a href="#p4">项目四</a>
+            <a href="#p5">脑图</a>
+            <a href="#p6">错题</a>
+        </div>
+    </div>
+    
+    <div class="banner">
+        <img src="" alt="">
+    </div>
+
+    <div class="title">
+        <h3><徐阅、金旗、余佳怡、向柯></h3>
+    </div>
+
+    <!-- 项目一 -->
+    <div id="p1" class="title">
+        <h3>项目一-模拟大学</h3>
+    </div>
+    <div class="p1-text">
+        <p>
+            源代码：<br>
+            days=7<br>
+            vjf=2<br>
+            xxds=2<br>
+            eng=2<br>
+            mood=10<br>
+            print("欢迎来到第二组的模拟人生之期末复习\n期末考只有",days,"天啦！赶紧开始复习吧！\n请平衡好自己的时间，劳逸结合，充分复习！\n")<br>
+            print("您的各项数据：\n"+"微积分水平：",vjf,"/10\n"+"线性代数水平：",xxds,"/10\n"+"大英水平：",eng,"/10\n"+"心理状态：",mood,"/10\n")<br>
+            print("做出选择：\n1.微积分  2.线性代数  3.英语  4.休闲")<br>
+            while days>0:<br>
+                opt=int(input())<br>
+                if opt== int(opt) and 0<opt<5:<br>
+                    if opt==1:<br>
+                        vjf+=2<br>
+                        mood-=2<br>
+                    if opt==2:<br>
+                        xxds+=2<br>
+                        mood-=2<br>
+                    if opt==3:<br>
+                        eng+=2<br>
+                        mood-=2<br>
+                    if opt==4:<br>
+                        mood+=2<br>
+                else:<br>
+                    print("请输入正确的选项！")<br>
+                if mood<0:<br>
+                    print("你心态崩了，放弃了考试，真是遗憾。")<br>
+                    break<br>
+                print("还有",days,"天，抓紧时间哦")<br>
+                print("您的各项数据：\n"+"微积分水平：",vjf,"/10\n"+"线性代数水平：",xxds,"/10\n"+"大英水平：",eng,"/10\n"+"心理状态：",mood,"/10\n")<br>
+                days-=1<br>
+            if mood>=0:<br>
+                print("终于迎来期末考，看看你表现如何吧！")  <br>  
+                if vjf>8:<br>
+                    print("微积分取得了满分，恭喜你！")<br>
+                elif vjf>5:<br>
+                    print("微积分及格啦，还不错！")<br>
+                else:<br>
+                    print("微积分不及格！准备重修吧！")<br>
+            
+                if xxds>8:<br>
+                    print("线性代数取得了满分，恭喜你！")<br>
+                elif xxds>5:<br>
+                    print("线性代数及格啦，还不错！")<br>
+                else:<br>
+                    print("线性代数不及格！准备重修吧！")<br>
+            
+                if eng>8:<br>
+                    print("英语取得了满分，恭喜你！")<br>
+                elif eng>5:<br>
+                    print("英语及格啦，还不错！")<br>
+                else:<br>
+                    print("英语不及格！准备重修吧！")
+        </p>
+    </div>  
+
+    <!-- 项目二 -->
+    <div id="p2" class="title">
+        <h3>项目二-级数求和</h3>
+    </div>
+    <div class="p1-text">
+        <p>
+            #p级数求和<br>
+            n=int(input("输入级数项数："))<br>
+            print(sum(1/i for i in range(1,n+1)))<br>
+            <br>
+            #输入一个整数a，求出1到n累加和<br>
+            N = int(input())<br>
+            sum = 0<br>
+            for I in range(N+1):<br>
+                sum += I<br>
+            print(sum)<br>
+            <br>
+            # [输入样例]5 2 <br>
+            # [输出样例]2 22 222 2222 22222 24690 <br>
+            # [输入样例]3 7 <br>
+            # [输出样例]7 77 777 861<br>
+            n = int(input("请输入 n："))<br>
+            m = int(input("请输入 m："))<br>
+            s = 0<br>
+            d = 0<br>
+            for i in range(n):<br>
+                d = d*10+m<br>
+                s += d<br>
+                print(d)<br>
+            print(s)<br>
+            
+            #数列{2/1,3/2,5/3,8/15,13/18,21/13......}求前二十项的和。<br>
+            # 设分母为y=2,分子x=1<br>
+            n = int(input(“请输入项数:”))<br>
+            y = 2<br>
+            x = 1<br>
+            sum = 0<br>
+            # 循环20次<br>
+            for i in range(1,1+n):<br>
+            sum += y<br>
+            x,y = y,x+y<br>
+            Print(“这个数列的前{}项的和是{:.2f}”.format(n,sum))<br>
+            <br>
+            #等比数求和<br>
+            a=int(input("输入底数："))<br>
+            n=int(input("输入级数项数："))<br>
+            print(sum(a**i for i in range(1,n+1)))<br>
+            <br>
+            #输入一个整数n，输出数列1+1/3+1/5+……前n项的和。<br>
+            #获取输入<br>
+            n = int(input())<br>
+            sum = 0<br>
+            deno = 1.0<br>
+            
+            #遍历求和<br>
+            for i in range(n):<br>
+                sum += 1 / deno<br>
+                deno += 2<br>
+            print("%.2f" %sum)<br>
+            <br>
+            #斐波那契数列前100项求和<br>
+            a = 0<br>
+            b = 1<br>
+            sums = 0<br>
+            for _ in range(101):<br>
+                sums +=a<br>
+                a,b = b,a+b<br>
+            print(sums)<br>
+            <br>
+            #求和1<br>
+            n=int(input())<br>
+            s=sum(list(range(n+1)))<br>
+            print(s)<br>
+            #求和2<br>
+            n=int(input())<br>
+            print(sum([i for i in range(n+1)]))<br>
+            #3偶数项求和<br>
+            n=int(input())<br>
+            print(sum([i for i in range(n+1) if i%2==0]))<br>
+            <br>
+            #求和4<br>
+            n=int(input())<br>
+            i=0<br>
+            for m in range(1,n+1):<br>
+                  i=i+m<br>
+            print(i)<br>
+            
+            #交错级数求和<br>
+            n=int(input())<br>
+            s=sum([i if i%2==0 else -i for i in range(n+1)])<br>
+            print(s)<br>
+        </p>
+    </div>
+
+    <!-- 项目三 -->
+    <div id="p3" class="title">
+        <h3>项目三-读取ppt数据+发送邮件</h3>
+    </div>
+    <div class="p1-text">
+        <p>
+            from pptx import Presentation<br>
+            from pptx.util import Inches<br>
+            import smtplib,email<br>
+            chst = email.charset.Charset(input_charset = 'utf-8')<br>
+            <br>
+            # header里分别定义发件人,收件人以及邮件主题。<br>
+            header = ("From: %s\nTo: %s\nSubject: %s\n\n" %<br>
+                    ("sendmail@163.com",<br>
+                    "receivemail@163.com",<br>
+                    chst.header_encode("Mail Test")))<br>
+         msg = ''' '''<br>
+         <br>
+          # 1. 得到幻灯片对象<br>
+         prs = Presentation("第4章 条件、循环和其他语句.pptx")<br>
+         # 2. 获取prs对象中的每一页PPT<br>
+         for slide in prs.slides:<br>
+           # 3. 遍历获取每页PPT中的内容<br>
+               for shape in slide.shapes: <br>
+                # 4. 判断是否存在文本<br>
+                  if shape.has_text_frame:<br>
+               # 5. 获取shape中的文本<br>
+                     text_frame = shape.text_frame<br>
+                       # 6. 获取text_frame中的段落内容<br>
+                     for paragraph in text_frame.paragraphs:<br>
+                        # 7. 打印段落内容<br>
+                        msg += paragraph.text.strip()+'\n'<br>
+                        
+             # 对header和msg邮件正文进行utf-8编码，指定发信人的smtp服务器，并输入邮箱密码进行登录验证，最后发送邮件。<br>
+         email_con = header.encode('utf-8') + msg.encode('utf-8')<br>
+         smtp = smtplib.SMTP("smtp.163.com")<br>
+         smtp.login("发送人邮箱地址@163.com","PGHBUFOPJLRGJVBA")<br>
+         smtp.sendmail('发送人邮箱地址.com','接收人邮件地址@qq.com',email_con)<br>
+         smtp.quit()<br>
+        </p>
+    </div>
+
+    <!-- 项目四 -->
+    <div id="p4" class="title">
+        <h3>项目四-网络爬虫</h3>
+    </div>
+    <div class="p1-text">
+        <p>
+         #读取网页数据<br>
+         pip install lxml<br>
+         import requests<br>
+         url = "网页链接"<br>
+         response = requests.get(url)<br>
+         print(response)<br>
+         content = response.text[:1000]<br>
+         print(content)<br>
+         <br>
+         #百度新闻爬虫<br>
+         import bs4<br>
+         from bs4 import BeautifulSoup<br>
+         html = response.text<br>
+         soup = BeautifulSoup(html,'lxml')<br>
+         content_all = soup.find_all(name='1')<br>
+         print(content_all)<br>
+         u2='https://news.baidu.com/'<br>
+         header={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'}<br>
+         res=requests.get(url = u2, headers=header)<br>
+         print(res.text)<br>
+
+        </p>
+    </div>
+
+    <!--脑图-->
+    <div id="p5" class="title">
+        <h3>脑图</h3>
+    </div>
+    <div class="photo">
+        <img src="脑图/概述.jpg" height="600">
+        <img src="脑图/基础语法.jpg" height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="脑图/输入输出.jpg"height="600">
+        <img src="脑图/布尔.jpg"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="脑图/判断.jpg"height="600">
+        <img src="脑图/列表.jpg"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="脑图/字典.jpg"height="600">
+        <img src="脑图/循环.jpg"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="脑图/函数.jpg"height="600">
+        <img src="脑图/模块.jpg"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="脑图/文件.jpg"height="600">
+        <img src="脑图/bug.jpg"height="600">
+    </div>
+
+    <!--错题-->
+    <div id="p6" class="title">
+        <h3>错题</h3>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第一章/屏幕截图 2023-06-18 232359.png"height="600">
+        <img src="py复习包/第一章/屏幕截图 2023-06-18 232408.png"height="600">
+        <img src="py复习包/第一章/屏幕截图 2023-06-18 232414.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第二章/屏幕截图 2023-06-18 231546.png"height="600">
+        <img src="py复习包/第二章/屏幕截图 2023-06-18 231554.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第三章/屏幕截图 2023-06-18 231904.png"height="600">
+        <img src="py复习包/第三章/屏幕截图 2023-06-18 231911.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第四章/屏幕截图 2023-06-18 232305.png"height="600">
+        <img src="py复习包/第四章/屏幕截图 2023-06-18 232314.png"height="600">
+        <img src="py复习包/第四章/屏幕截图 2023-06-18 232323.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第五章/屏幕截图 2023-06-18 232851.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第六章/屏幕截图 2023-06-18 232004.png"height="600">
+        <img src="py复习包/第六章/屏幕截图 2023-06-18 232012.png"height="600">
+        <img src="py复习包/第六章/屏幕截图 2023-06-18 232051.png"height="600">
+        <img src="py复习包/第六章/屏幕截图 2023-06-18 232058.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/第七章/屏幕截图 2023-06-18 231826.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/判断题/屏幕截图 2023-06-18 231708.png"height="600">
+        <img src="py复习包/判断题/屏幕截图 2023-06-18 231720.png"height="600">
+        <img src="py复习包/判断题/屏幕截图 2023-06-18 231730.png"height="600">
+        <img src="py复习包/判断题/屏幕截图 2023-06-18 231738.png"height="600">
+        <img src="py复习包/判断题/屏幕截图 2023-06-18 231745.png"height="600"><br>
+    </div>
+    <div class="photo">
+        <img src="py复习包/py函数/屏幕截图 2023-06-18 231332.png"height="600">
+        <img src="py复习包/py函数/屏幕截图 2023-06-18 231340.png"height="600"><br>
+    </div>
+</body>
+</html>
